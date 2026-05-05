@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 // Helper: makes fetch calls with credentials (sends JWT cookie automatically)
 const apiFetch = async (endpoint: string, options: RequestInit = {}) => {
